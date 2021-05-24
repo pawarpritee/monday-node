@@ -41,6 +41,9 @@ app.use((req,res,next)=>{
    }
    next();
 });
+
+
+
 app.use('/products',productRoutes);
 app.use('/orders',orderRoutes);
 app.use('/user',userRoutes);
@@ -63,5 +66,7 @@ app.use((error,req,res,next)=>{
         }
     });
 });
-
+app.get('*',(req,res)=>{
+    res.sendFile(this.path.join(__dirname,'index.html'))
+})
 module.exports=app;
