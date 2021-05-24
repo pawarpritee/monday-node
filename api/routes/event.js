@@ -44,7 +44,6 @@ router.post('/',(req,res,next)=>{
         endTimezone:req.body.EndTimezone,
         city:req.body.City
     });
-
     //save will store data in db check result and catch
     event
     .save()

@@ -175,7 +175,7 @@ router.post('/login', (req, res, next) => {
                         {
                             expiresIn: "1h"
                         });
-                    return res.status(200).json({
+                        return res.status(200).json({
                         message: 'Sucessfully Logged In!',
                         token: token
                     });
@@ -192,7 +192,6 @@ router.post('/login', (req, res, next) => {
             });
         });
 });
-
 
 router.delete('/:userId', (req, res, next) => {
     User.remove({ _id: req.params.userId })
